@@ -2,6 +2,14 @@
 
   var queryTerm;
 
+  function displayNoResults(str) {
+    $('.search-results').removeClass('hidden');
+    var section = document.querySelector('.search-results');
+    var p = document.createElement('p');
+    p.innerHTML = 'There were no search results for <em>' + str + '</em>...';
+    section.appendChild(p);
+  }
+
   function displaySearchResultsHead(str) {
     $('.search-results').removeClass('hidden');
     var section = document.querySelector('.search-results');
@@ -30,6 +38,12 @@
   //media wiki ajax query using form input field text value
   //parse resulting urls and page titles
   function searchIconEventListener() {
+    var section = document.querySelector('.search-results');
+
+    if (section.childElementCount > 0) {
+      section.innerHTML = '';
+    }
+
     queryTerm = document.querySelector('#search').value;
     var url = 'http://en.wikipedia.org/w/api.php?format=json&action=opensearch&search=' + queryTerm+ '&callback=results';
 
@@ -39,10 +53,17 @@
     }).
       done(function(results) {
         var resultsAr = results;
-        displaySearchResultsHead(results[0]);
+        //console.log(resultsAr);
+        var resultsLength = resultsAr[1].length;
 
-        for (var i = 0; i < 10; i++) {
-          displayWikiPageSummary(resultsAr, i);
+        if (resultsLength > 0) {
+          displaySearchResultsHead(resultsAr[0]);
+
+          for (var i = 0; i < resultsLength; i++) {
+            displayWikiPageSummary(resultsAr, i);
+          }
+        } else {
+          displayNoResults(resultsAr[0]);
         }
       }).
       error(function(err) {
