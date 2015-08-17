@@ -1,48 +1,67 @@
 body {
-	background-color: #457e86;
-	color: #000;
-	font-family: 'Lato',sans-serif;
+	background-color: #b7a296;
+	color: #333;
+	font-family: 'Merriweather', serif;
+	font-weight: 400;
 }
 
 .main {
 	width: 90%;
 	height: 100%;
 	margin: 0 auto;
+	/*border: 1px solid red;*/
 }
 
-article {
-	width: 100%;
-	background-color: #fff;
-	padding: 3px 0 7px;
-	border-bottom: 1px solid #ccc;
+.center {
+	margin: 0 auto;
+	text-align: center;
 }
 
 h2 {
 	text-align: center;
 	margin-top: 20px;
+	font-weight: 700;
 }
 
 h3 {
-	width: 90%;
-	margin: 0 5%;
+	/*width: 90%;
+	margin: 0 5%;*/
 	font-size: 1.4em;
+	font-weight: 700;
 }
 
 p {
-	font-size: 1.25em;
+	font-size: 1.0em;
 }
 
-span {
-	margin-left: 10px;
+.search-results {
+	margin-top: 30px;
+	border-radius: 10px;
+	border: 1px solid #666;
+	padding: 15px;
+}
+
+article {
+	border-bottom: 1px solid #666;
 }
 
 footer {
 	padding-top: 15px;
 	clear: both;
-	color: #042e48;
+	/*color: #042e48;*/
 	text-align: center;
 	font-size: 0.85em;
 }
+
+#search {
+	max-width: 85%;
+	border-radius: 10px;
+	background-color: #885159;
+	height: 35px;
+	color: #000;
+}
+
+/* this is section for things I don't think I need */
 
 .buttons {
 	margin: 20px auto;
@@ -57,11 +76,6 @@ footer {
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	webkit-border-radius: 10px;
-}
-
-img {
-	display: none;
-	border-radius: 12px;
 }
 
 .story-link, .story {
@@ -82,12 +96,18 @@ img {
 	font-size: 1em;
 }
 
-i {
-	font-size: 1.25em;
+.ion-search {
+	font-size: 1.75em;
+	color: #885159; /*#886451;*/
+	vertical-align: middle;
 }
 
-a:link, a:hover {
-	color: #457e86;
+.ion-ios-heart {
+	color: #885159;
+}
+
+a:link, a:hover, a:visited, a:active {
+	color: #645188;
 }
 
 @media only screen and (min-width: 600px)  {
@@ -99,20 +119,14 @@ a:link, a:hover {
 		margin-top: 20px;
 	}
 
-	article {
+/*	article {
 		width: 50%;
 		height: 400px;
 		float: left;
 		padding: 5px 0 10px;
 		border-bottom: 0;
-	}
+	}*/
 
-	img {
-		display: block;
-		max-width: 90%;
-		height: 65%;
-		margin: 0 auto;
-	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -123,19 +137,6 @@ a:link, a:hover {
 
 	h2 {
 		text-align: center;
-	}
-
-	article {
-		width: 33%;
-/*		height: 350px;
-*/		float: left;
-	}
-
-	img {
-		display: block;
-		max-width: 90%;
-		height: 65%;
-		margin: 0 auto;
 	}
 
 	.button {
@@ -149,10 +150,10 @@ a:link, a:hover {
 		background-position: 50% 40px, center;
 	}
 
-	article {
-/*		height: 350px;
-*/		margin: 0 auto;
+	.main {
+		width: 80%;
 	}
+
 }
 
 @media only screen and (min-width: 1200px) {
@@ -161,7 +162,4 @@ a:link, a:hover {
 		text-align: center;
 	}
 
-	p {
-		text-align: center;
-	}
 }
