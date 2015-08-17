@@ -34,6 +34,17 @@
     section.appendChild(article);
   }
 
+  //enter key press handler
+  //if focus is on the input field and user presses enter (keyboard up event)
+  //then the search should be triggered
+  function enterKeyUp(event) {
+    var input = document.querySelector('input');
+
+    if (event.key === 'Enter' || event.keyCode === 13 && input === document.activeElement) {
+      searchIconEventListener();
+    }
+  }
+
   //search icon click event handler
   //media wiki ajax query using form input field text value
   //parse resulting urls and page titles
@@ -77,5 +88,8 @@
   //search icon click listener
   var searchIcon = document.querySelector('.ion-search');
   searchIcon.addEventListener('click', searchIconEventListener);
+
+  //enter key press listener
+  document.querySelector('form').onkeypress = enterKeyUp;
 
 }());

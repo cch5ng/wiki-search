@@ -14,6 +14,15 @@
 	<link href="css/style.css" rel="stylesheet" >
 	<link href='http://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<script>
+		//prevents enter key press from submitting the form and refreshing the browser
+		function noEnter(event) {
+			//chrome supports window.event but firefox does not
+			event = event || window.event;
+			return !(event && event.keyCode === 13 || event.key === "Enter");
+		}
+	</script>
+
 </head>
 <body>
 	<header>
@@ -22,7 +31,7 @@
 
 	<main class="main">
 		<form class="center">
-			<input type="text" name="search" id="search" size="70" ></input>
+			<input type="text" name="search" id="search" size="70" onkeypress="return noEnter(event)"></input>
 			<i class="ion ion-search"></i>
 		</form>
 		<section class="hidden search-results">
