@@ -1,30 +1,39 @@
 //pseudocode
+document.addEventListener('DOMContentLoaded', function(evt) {
 
-//search icon click event handler
-//media wiki ajax query using form input field text value
-//parse resulting urls and page titles
-function searchBtnEventListener() {
-  var query = document.getElementById('search').value;
-  console.log(query);
-  var queryUrl = 'http://en.wikipedia.org/w/api.php?format=json&action=opensearch&search=' + query + '&callback=results';
+  var queryTerm;
 
-  var jqhxr = $.ajax({
-    url: queryUrl,
-    dataType: 'jsonp'
-  }).
-    done(function(results) {
-      console.log(results);
-      
+  //search icon click event handler
+  //media wiki ajax query using form input field text value
+  //parse resulting urls and page titles
+  function searchIconEventListener() {
+    queryTerm = document.querySelector('#search').value;
+    console.log('queryTerm: ' + queryTerm);
+    console.log('got here');
+    var url = 'http://en.wikipedia.org/w/api.php?format=json&action=opensearch&search=' + queryTerm+ '&callback=results';
+    console.log(url);
+
+    var jqhxr = $.ajax({
+      url: url,
+      dataType: 'jsonp'
     }).
-    error(function(err) {
-      console.log('err: ' + err);
-    }).
-    always(function() {
-      console.log('query completed, thanks');
-    });
-  
-}
+      done(function(results) {
+        console.log(results);
+        
+      }).
+      error(function(err) {
+        console.log('err: ' + err);
+      }).
+      always(function() {
+        console.log('query completed, thanks');
+      });
+  }
 
-//search icon click listener
-var searchBtn = document.getElementById('searchBtn');
-searchBtn.addEventListener('click', searchBtnEventListener);
+  //search icon click listener
+  var searchIcon = document.querySelector('.icon-search');
+  console.log(searchIcon);
+
+  // var searchBtn = document.getElementById('searchBtn');
+  searchIcon.addEventListener('click', searchIconEventListener);
+
+});
