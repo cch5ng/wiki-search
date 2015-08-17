@@ -1,5 +1,5 @@
 //pseudocode
-document.addEventListener('DOMContentLoaded', function(evt) {
+(function() {
 
   var queryTerm;
 
@@ -30,10 +30,11 @@ document.addEventListener('DOMContentLoaded', function(evt) {
   }
 
   //search icon click listener
-  var searchIcon = document.querySelector('.icon-search');
+  var searchIcon = document.querySelector('.ion-search');
   console.log(searchIcon);
 
   // var searchBtn = document.getElementById('searchBtn');
   searchIcon.addEventListener('click', searchIconEventListener);
 
-});
+
+}());
