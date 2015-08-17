@@ -9,7 +9,6 @@ body {
 	width: 90%;
 	height: 100%;
 	margin: 0 auto;
-	/*border: 1px solid red;*/
 }
 
 .center {
@@ -24,8 +23,6 @@ h2 {
 }
 
 h3 {
-	/*width: 90%;
-	margin: 0 5%;*/
 	font-size: 1.4em;
 	font-weight: 700;
 }
@@ -48,7 +45,6 @@ article {
 footer {
 	padding-top: 15px;
 	clear: both;
-	/*color: #042e48;*/
 	text-align: center;
 	font-size: 0.85em;
 }
@@ -59,41 +55,6 @@ footer {
 	background-color: #885159;
 	height: 35px;
 	color: #000;
-}
-
-/* this is section for things I don't think I need */
-
-.buttons {
-	margin: 20px auto;
-}
-
-.button {
-	color: #457e86;
-	margin: 10px auto;
-	padding: 5px;
-	/* overwriting bootstrap button style */
-	border: 1px solid #58575d;
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	webkit-border-radius: 10px;
-}
-
-.story-link, .story {
-	width: 90%;
-	margin: 5px 5%;
-}
-
-.story-link {
-	color: #457e86;
-	display: block;
-	max-width: 90%;
-	font-size: 1.25em;
-	text-align: justify-all;
-	flex-wrap: wrap;
-}
-
-.story {
-	font-size: 1em;
 }
 
 .ion-search {
@@ -112,21 +73,9 @@ a:link, a:hover, a:visited, a:active {
 
 @media only screen and (min-width: 600px)  {
 
-	body {
-	}
-
 	h2 {
 		margin-top: 20px;
 	}
-
-/*	article {
-		width: 50%;
-		height: 400px;
-		float: left;
-		padding: 5px 0 10px;
-		border-bottom: 0;
-	}*/
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -137,10 +86,6 @@ a:link, a:hover, a:visited, a:active {
 
 	h2 {
 		text-align: center;
-	}
-
-	.button {
-		margin: 30px auto;
 	}
 }
 
@@ -153,7 +98,6 @@ a:link, a:hover, a:visited, a:active {
 	.main {
 		width: 80%;
 	}
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -161,5 +105,4 @@ a:link, a:hover, a:visited, a:active {
 	.story-link {
 		text-align: center;
 	}
-
 }
