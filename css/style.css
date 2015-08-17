@@ -1,0 +1,167 @@
+body {
+	background-color: #457e86;
+	color: #000;
+	font-family: 'Lato',sans-serif;
+}
+
+.main {
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+article {
+	width: 100%;
+	background-color: #fff;
+	padding: 3px 0 7px;
+	border-bottom: 1px solid #ccc;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 20px;
+}
+
+h3 {
+	width: 90%;
+	margin: 0 5%;
+	font-size: 1.4em;
+}
+
+p {
+	font-size: 1.25em;
+}
+
+span {
+	margin-left: 10px;
+}
+
+footer {
+	padding-top: 15px;
+	clear: both;
+	color: #042e48;
+	text-align: center;
+	font-size: 0.85em;
+}
+
+.buttons {
+	margin: 20px auto;
+}
+
+.button {
+	color: #457e86;
+	margin: 10px auto;
+	padding: 5px;
+	/* overwriting bootstrap button style */
+	border: 1px solid #58575d;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	webkit-border-radius: 10px;
+}
+
+img {
+	display: none;
+	border-radius: 12px;
+}
+
+.story-link, .story {
+	width: 90%;
+	margin: 5px 5%;
+}
+
+.story-link {
+	color: #457e86;
+	display: block;
+	max-width: 90%;
+	font-size: 1.25em;
+	text-align: justify-all;
+	flex-wrap: wrap;
+}
+
+.story {
+	font-size: 1em;
+}
+
+i {
+	font-size: 1.25em;
+}
+
+a:link, a:hover {
+	color: #457e86;
+}
+
+@media only screen and (min-width: 600px)  {
+
+	body {
+	}
+
+	h2 {
+		margin-top: 20px;
+	}
+
+	article {
+		width: 50%;
+		height: 400px;
+		float: left;
+		padding: 5px 0 10px;
+		border-bottom: 0;
+	}
+
+	img {
+		display: block;
+		max-width: 90%;
+		height: 65%;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+
+	main {
+		width: 80%;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	article {
+		width: 33%;
+/*		height: 350px;
+*/		float: left;
+	}
+
+	img {
+		display: block;
+		max-width: 90%;
+		height: 65%;
+		margin: 0 auto;
+	}
+
+	.button {
+		margin: 30px auto;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+
+	body {
+		background-position: 50% 40px, center;
+	}
+
+	article {
+/*		height: 350px;
+*/		margin: 0 auto;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.story-link {
+		text-align: center;
+	}
+
+	p {
+		text-align: center;
+	}
+}
